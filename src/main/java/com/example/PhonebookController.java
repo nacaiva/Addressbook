@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Phonebook {
+public class PhonebookController {
 
 	@Autowired
-	PhonebookRepository phonebookRepository;
+	PersonRepository personRepository;
 
 	@RequestMapping("/phonebook")
 	List<Person> perosons() {
-		return this.phonebookRepository.findAll();
+		return this.personRepository.findAll();
 	}
 }

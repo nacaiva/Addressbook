@@ -9,6 +9,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @Entity(name = "PERSON")
 public class Person {
 
@@ -22,7 +27,7 @@ public class Person {
 	private String lastname;
 
 	@OneToMany(mappedBy = "person")
-	private List<PhoneNumber> numbers;
+	private List<Phone> numbers;
 
 	public Person(String firstname, String lastname) {
 		this.firstname = firstname;
@@ -38,45 +43,10 @@ public class Person {
 	public String toString() {
 		String res = "Person:  " + id + " - " + firstname + " " + lastname + "\n ";
 		if (numbers != null) {
-			for (PhoneNumber num : numbers) {
+			for (Phone num : numbers) {
 				res += "Numbers: " + num.getNumber() + "\n";
 			}
 		}
 		return res;
 	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getFirstname() {
-		return firstname;
-	}
-
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
-
-	public String getLastname() {
-		return lastname;
-	}
-
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
-
-	public List<PhoneNumber> getNumbers() {
-		return numbers;
-	}
-
-	public void setNumbers(List<PhoneNumber> numbers) {
-		this.numbers = numbers;
-	}
-
-	
-	
 }

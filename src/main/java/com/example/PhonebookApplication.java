@@ -18,13 +18,13 @@ class PhoneBookCommandLineRunner implements CommandLineRunner {
 	@Override
 	public void run(String... arg0) throws Exception {
 
-		for (Person p : this.phoneRepo.findAll()) {
+		for (Person p : this.personRepo.findAll()) {
 			System.out.println(p.toString());
 		}
 
 	}
 
 	@Autowired
-	PhonebookRepository phoneRepo;
+	PersonRepository personRepo;
 
 }

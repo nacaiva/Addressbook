@@ -9,8 +9,13 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @Entity(name = "PHONE")
-public class PhoneNumber {
+public class Phone {
 
 	@Id
 	@GeneratedValue
@@ -23,11 +28,11 @@ public class PhoneNumber {
 	@JoinColumn(name = "PERSONID")
 	private Person person;
 
-	public PhoneNumber() {
+	public Phone() {
 
 	}
 
-	public PhoneNumber(String numbers, Person person) {
+	public Phone(String numbers, Person person) {
 		this.number = numbers;
 		this.person = person;
 	}
@@ -37,28 +42,6 @@ public class PhoneNumber {
 		return "[ " + number + "]";
 	}
 
-	public Long getId() {
-		return id;
-	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNumber() {
-		return number;
-	}
-
-	public void setNumber(String numbers) {
-		this.number = numbers;
-	}
-
-	public Person getPerson() {
-		return person;
-	}
-
-	public void setPerson(Person person) {
-		this.person = person;
-	}
 
 }
