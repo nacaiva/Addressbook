@@ -1,6 +1,5 @@
-package com.example;
+package com.natalija.phonebook.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,39 +8,31 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@Entity(name = "PHONE")
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
 public class Phone {
 
 	@Id
 	@GeneratedValue
-	@Column(name = "ID")
 	private Long id;
-	@Column(name = "NUMBER")
+	
 	private String number;
-	@JsonIgnore
+	
 	@ManyToOne
 	@JoinColumn(name = "PERSONID")
 	private Person person;
-
-	public Phone() {
-
+	
+	@JsonIgnore
+	public Person getPerson() {
+		return person;
 	}
-
-	public Phone(String numbers, Person person) {
-		this.number = numbers;
-		this.person = person;
-	}
-
-	@Override
-	public String toString() {
-		return "[ " + number + "]";
-	}
-
-
 
 }

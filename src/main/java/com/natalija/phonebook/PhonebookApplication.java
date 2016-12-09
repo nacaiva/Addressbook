@@ -1,9 +1,11 @@
-package com.example;
+package com.natalija.phonebook;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.natalija.phonebook.model.Person;
 
 @SpringBootApplication
 public class PhonebookApplication {
@@ -15,16 +17,18 @@ public class PhonebookApplication {
 
 class PhoneBookCommandLineRunner implements CommandLineRunner {
 
+	@Autowired
+	PersonRepository personRepo;
+	
 	@Override
 	public void run(String... arg0) throws Exception {
 
-		for (Person p : this.personRepo.findAll()) {
+		for (Person p : personRepo.findAll()) {
 			System.out.println(p.toString());
 		}
 
 	}
 
-	@Autowired
-	PersonRepository personRepo;
+	
 
 }

@@ -8,7 +8,3 @@ insert into PHONE (PERSONID, NUMBER) values (1,'069/8294145');
 insert into PHONE (PERSONID, NUMBER) values (2,'061/2819417');
 insert into PHONE (PERSONID, NUMBER) values (3,'065/2819417');
 insert into PHONE (PERSONID, NUMBER) values (1,'065/2819417');
-
-
-
-
