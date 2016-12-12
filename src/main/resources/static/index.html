@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phonebook</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <h1>Phonebook</h1>
+
+  <ul id="phonebook">
+    <template>
+      <li>
+        <h2>{{name}}</h2>
+        <ul>
+          <template>
+            <li>{{number}}</li>
+          </template>
+        </ul>
+      </li>
+    </template>
+  </ul>
+</body>
+</html>

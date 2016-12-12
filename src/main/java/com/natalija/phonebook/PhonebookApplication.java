@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.natalija.phonebook.model.Person;
+import com.natalija.phonebook.model.PersonRepository;
 
 @SpringBootApplication
 public class PhonebookApplication {
