@@ -3,19 +3,24 @@ $(function() {
     url : '/phonebook'
   }).done(function(persons) {
     var $list = $('#phonebook');
-    var template = $list.find('template').html();
+    var personTemp = $list.find('#personTemp').html();
+    var numberTemp = $list.find('#numberTemp').html();
 
     //  Render persons
     $.each(persons, function(index) {
       var person = persons[index];
-      console.log(person);
-
-      $list.append(template.replace('{{name}}',person.firstname + ' ' +person.lastname));
 
       //  Render person's numbers
+      var numbers='';
       $.each(person.numbers, function(index) {
-        
+        var number = person.numbers[index].number;
+        numbers+=numberTemp.replace('{{number}}',number);
       });
+
+      $list.append(
+          personTemp.replace('{{name}}',person.firstname + ' ' +person.lastname)
+          .replace('{{numbers}}',numbers)
+      );
     });
   });
 });

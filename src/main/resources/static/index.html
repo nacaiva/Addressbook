@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Phonebook</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="index.js"></script>
+<title>Phonebook</title>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="index.js"></script>
 </head>
 
 <body>
   <h1>Phonebook</h1>
 
   <ul id="phonebook">
-    <template>
+    <template id="personTemp">
       <li>
         <h2>{{name}}</h2>
         <ul>
-          <template>
-            <li>{{number}}</li>
-          </template>
+          {{numbers}}
         </ul>
+      </li>
+    </template>
+    <template id="numberTemp">
+      <li>
+        <h3>{{number}}</h3>
       </li>
     </template>
   </ul>
