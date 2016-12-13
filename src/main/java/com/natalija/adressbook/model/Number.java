@@ -1,4 +1,4 @@
-package com.natalija.phonebook.model;
+package com.natalija.adressbook.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,16 +23,21 @@ public class Number {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
 	private String number;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "PERSONID")
 	private Person person;
-	
+
 	@JsonIgnore
 	public Person getPerson() {
 		return person;
+	}
+
+	@Override
+	public String toString() {
+		return "" + number + "\n";
 	}
 
 }

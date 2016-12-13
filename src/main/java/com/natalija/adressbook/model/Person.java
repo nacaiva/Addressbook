@@ -1,4 +1,4 @@
-package com.natalija.phonebook.model;
+package com.natalija.adressbook.model;
 
 import java.util.List;
 

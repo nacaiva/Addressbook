@@ -1,8 +1,8 @@
 $(function() {
   $.ajax({
-    url : '/phonebook'
+    url : '/adressbook'
   }).done(function(persons) {
-    var $list = $('#phonebook');
+    var $list = $('#adressbook');
     var personTemp = $list.find('#personTemp').html();
     var numberTemp = $list.find('#numberTemp').html();
 

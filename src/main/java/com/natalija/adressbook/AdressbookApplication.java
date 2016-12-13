@@ -1,26 +1,26 @@
-package com.natalija.phonebook;
+package com.natalija.adressbook;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.natalija.phonebook.model.Person;
-import com.natalija.phonebook.model.PersonRepository;
+import com.natalija.adressbook.model.Person;
+import com.natalija.adressbook.model.PersonRepository;
 
 @SpringBootApplication
-public class PhonebookApplication {
+public class AdressbookApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PhonebookApplication.class, args);
+		SpringApplication.run(AdressbookApplication.class, args);
 	}
 }
 
-class PhoneBookCommandLineRunner implements CommandLineRunner {
+class AdressBookCommandLineRunner implements CommandLineRunner {
 
 	@Autowired
 	PersonRepository personRepo;
-	
+
 	@Override
 	public void run(String... arg0) throws Exception {
 
@@ -29,7 +29,5 @@ class PhoneBookCommandLineRunner implements CommandLineRunner {
 		}
 
 	}
-
-	
 
 }
