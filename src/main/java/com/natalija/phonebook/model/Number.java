@@ -18,7 +18,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Phone {
+public class Number {
 
 	@Id
 	@GeneratedValue

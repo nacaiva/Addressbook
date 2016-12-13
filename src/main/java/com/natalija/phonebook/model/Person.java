@@ -27,6 +27,6 @@ public class Person {
 	private String lastname;
 
 	@OneToMany(mappedBy = "person", fetch = FetchType.EAGER)
-	private List<Phone> numbers;
+	private List<Number> numbers;
 
 }
