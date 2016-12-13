@@ -1,18 +1,18 @@
-package com.natalija.adressbook;
+package com.natalija.addressbook;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.natalija.adressbook.model.Person;
-import com.natalija.adressbook.model.PersonRepository;
+import com.natalija.addressbook.model.Person;
+import com.natalija.addressbook.model.PersonRepository;
 
 @SpringBootApplication
-public class AdressbookApplication {
+public class AddressbookApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AdressbookApplication.class, args);
+		SpringApplication.run(AddressbookApplication.class, args);
 	}
 }
 

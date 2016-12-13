@@ -1,4 +1,4 @@
-package com.natalija.adressbook.model;
+package com.natalija.addressbook.model;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

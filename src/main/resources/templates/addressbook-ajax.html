@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Addressbook</title>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/addressbook-ajax.js"></script>
+</head>
+
+<body>
+  <h1>Addressbook</h1>
+
+  <ul id="addressbook">
+    <template id="personTemp">
+    <li>
+      <h2>{{name}}</h2>
+      <ul>{{numbers}}
+      </ul>
+    </li>
+    </template>
+    <template id="numberTemp">
+    <li>
+      <h3>{{number}}</h3>
+    </li>
+    </template>
+  </ul>
+</body>
+</html>
