@@ -3,7 +3,6 @@ package com.natalija.addressbook.model;
 import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -26,7 +25,16 @@ public class Person {
 	private String firstname;
 	private String lastname;
 
-	@OneToMany(mappedBy = "person", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "person")
 	private List<Number> numbers;
+
+	@OneToMany(mappedBy = "person")
+	private List<Address> addresses;
+
+	@OneToMany(mappedBy = "person")
+	private List<Email> emails;
+
+	@OneToMany(mappedBy = "person")
+	private List<Note> notes;
 
 }
