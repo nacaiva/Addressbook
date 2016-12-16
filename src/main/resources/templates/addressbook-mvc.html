@@ -9,32 +9,12 @@
   <ul th:each="entry : ${entries}">
     <li>
       <h2 th:text="${entry.name}">Full name</h2>
-      <h3>Numbers:</h3>
-      <ul th:each="detail : ${details}">
+      
+      <ul th:each="detail : ${entry.details}" >
         <li>
-          <h4 th:text="${detail.value}">Number</h4>
+          <h3 th:text="${detail.type + ': ' + detail.value}">Number</h3>
         </li>
       </ul>
-      <h3>Addresses:</h3>
-      <!-- 
-      <ul th:each="detail : ${entry.details.detailType.ADDRESS}">
-        <li>
-          <h4 th:text="${detail.detailValue}">Address</h4>
-        </li>
-      </ul>
-      <h3>E-mails:</h3>
-      <ul th:each="detail : ${entry.details.detailType.EMAIL}">
-        <li>
-          <h4 th:text="${detail.detailValue}">Email</h4>
-        </li>
-      </ul>
-      <h3>Notes:</h3>
-      <ul th:each="detail : ${entry.details.detailType.NOTE}">
-        <li>
-          <h4 th:text="${detail.detailValue}">Note</h4>
-        </li>
-      </ul>
-      -->
     </li>
   </ul>
 </body>
