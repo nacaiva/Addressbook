@@ -5,8 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.natalija.addressbook.model.Person;
-import com.natalija.addressbook.model.PersonRepository;
+import com.natalija.addressbook.model.AddressEntry;
+import com.natalija.addressbook.model.EntryRepository;
 
 @SpringBootApplication
 public class AddressbookApplication {
@@ -19,12 +19,12 @@ public class AddressbookApplication {
 class AdressBookCommandLineRunner implements CommandLineRunner {
 
 	@Autowired
-	PersonRepository personRepo;
+	EntryRepository personRepo;
 
 	@Override
 	public void run(String... arg0) throws Exception {
 
-		for (Person p : personRepo.findAll()) {
+		for (AddressEntry p : personRepo.findAll()) {
 			System.out.println(p.toString());
 		}
 

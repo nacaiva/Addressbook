@@ -2,6 +2,6 @@ package com.natalija.addressbook.model;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PersonRepository extends JpaRepository<Person, Long> {
+public interface EntryRepository extends JpaRepository<AddressEntry, Long> {
 
 }

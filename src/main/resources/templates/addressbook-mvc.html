@@ -6,33 +6,35 @@
 </head>
 <body>
   <h1>Addressbook</h1>
-  <ul th:each="person : ${persons}">
+  <ul th:each="entry : ${entries}">
     <li>
-      <h2 th:text="${person.firstname + ' ' + person.lastname}">Full name</h2>
+      <h2 th:text="${entry.name}">Full name</h2>
       <h3>Numbers:</h3>
-      <ul th:each="number : ${person.numbers}">
+      <ul th:each="detail : ${details}">
         <li>
-          <h4 th:text="${number}">Number</h4>
+          <h4 th:text="${detail.value}">Number</h4>
         </li>
       </ul>
       <h3>Addresses:</h3>
-      <ul th:each="address : ${person.addresses}">
+      <!-- 
+      <ul th:each="detail : ${entry.details.detailType.ADDRESS}">
         <li>
-          <h4 th:text="${address}">Address</h4>
+          <h4 th:text="${detail.detailValue}">Address</h4>
         </li>
       </ul>
-      <h3>Emails:</h3>
-      <ul th:each="email : ${person.emails}">
+      <h3>E-mails:</h3>
+      <ul th:each="detail : ${entry.details.detailType.EMAIL}">
         <li>
-          <h4 th:text="${email}">Email</h4>
+          <h4 th:text="${detail.detailValue}">Email</h4>
         </li>
       </ul>
       <h3>Notes:</h3>
-      <ul th:each="note : ${person.notes}">
+      <ul th:each="detail : ${entry.details.detailType.NOTE}">
         <li>
-          <h4 th:text="${note}">Note</h4>
+          <h4 th:text="${detail.detailValue}">Note</h4>
         </li>
       </ul>
+      -->
     </li>
   </ul>
 </body>

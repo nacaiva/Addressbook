@@ -5,16 +5,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.natalija.addressbook.model.PersonRepository;
+import com.natalija.addressbook.model.EntryRepository;
 
 @Controller
 public class AddressbookMVCController {
 	@Autowired
-	PersonRepository personRepository;
+	EntryRepository entryRepository;
 
 	@GetMapping("/addressbook-mvc")
 	public String showPersonsDetails(Model model) {
-		model.addAttribute("persons", personRepository.findAll());
+		model.addAttribute("entries", entryRepository.findAll());
 		return "addressbook-mvc";
 	}
 }

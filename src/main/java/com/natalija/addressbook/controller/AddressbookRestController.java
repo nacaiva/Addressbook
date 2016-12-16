@@ -6,17 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.natalija.addressbook.model.Person;
-import com.natalija.addressbook.model.PersonRepository;
+import com.natalija.addressbook.model.AddressEntry;
+import com.natalija.addressbook.model.EntryRepository;
 
 @RestController
 public class AddressbookRestController {
 
 	@Autowired
-	PersonRepository personRepository;
+	EntryRepository personRepository;
 
 	@GetMapping("/addressbook")
-	List<Person> perosons() {
+	List<AddressEntry> perosons() {
 		return personRepository.findAll();
 	}
 }
