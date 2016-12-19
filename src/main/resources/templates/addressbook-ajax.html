@@ -6,21 +6,41 @@
 <script
   src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="js/addressbook-ajax.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+
 </head>
 
 <body>
-  <h1>Addressbook</h1>
+  <h1><span class="glyphicon glyphicon-book"></span> Addressbook</h1>
 
   <ul id="addressbook">
     <template id="personTemp">
     <li>
-      <h2>{{name}}</h2>
-      <ul>{{details}}</ul>
+      <h2><span class="glyphicon glyphicon-user"></span> {{name}}</h2>
+      <ul>{{numbers}}</ul>
+      <ul>{{addresses}}</ul>
+      <ul>{{emails}}</ul>
+      <ul>{{notes}}</ul>
     </li>
     </template>
-    <template id= "detailsTemp">
+    <template id= "numberTemp">
     <li>
-      <h3>{{detailValue}}</h3>
+      <h3><span class="glyphicon glyphicon-phone-alt"></span> {{number}}</h3>
+    </li>
+    </template>
+    <template id= "addressTemp">
+    <li>
+      <h3><span class="glyphicon glyphicon-home"></span> {{address}}</h3>
+    </li>
+    </template>
+    <template id= "emailTemp">
+    <li>
+      <h3><span class="glyphicon glyphicon-envelope"></span> {{email}}</h3>
+    </li>
+    </template>
+    <template id= "noteTemp">
+    <li>
+      <h3><span class="glyphicon glyphicon-bookmark"></span> {{note}}</h3>
     </li>
     </template>
   </ul>

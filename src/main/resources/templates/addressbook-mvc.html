@@ -2,17 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8"></meta>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 <title>Addressbook</title>
 </head>
 <body>
-  <h1>Addressbook</h1>
+  <h1><span class="glyphicon glyphicon-book"></span> Addressbook</h1>
   <ul th:each="entry : ${entries}">
-    <li>
-      <h2 th:text="${entry.name}">Full name</h2>
-      
+    <li><i class="glyphicon glyphicon-user" th:text="${entry.name}"></i>
       <ul th:each="detail : ${entry.details}" >
-        <li>
-          <h3 th:text="${detail.type + ': ' + detail.value}">Number</h3>
+        <li><i class="glyphicon glyphicon-book" th:text="${detail.value}"></i>
         </li>
       </ul>
     </li>
