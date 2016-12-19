@@ -12,7 +12,6 @@ $(function() {
     $.each(entries, function(index) {
       var entry = entries[index];
 
-      var detailsValue='';
       var numbers= '';
       var addresses= '';
       var emails= '';

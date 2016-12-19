@@ -8,9 +8,18 @@
 <body>
   <h1><span class="glyphicon glyphicon-book"></span> Addressbook</h1>
   <ul th:each="entry : ${entries}">
-    <li><i class="glyphicon glyphicon-user" th:text="${entry.name}"></i>
+    <li> 
+      <h2><span class="glyphicon glyphicon-user" th:text="${' ' +entry.name}"></span></h2>
       <ul th:each="detail : ${entry.details}" >
-        <li><i class="glyphicon glyphicon-book" th:text="${detail.value}"></i>
+        <li>
+          <h3><span class="glyphicon "
+            th:attrappend="class='glyphicon-' + ${
+              detail.type.name() == 'NUMBER' ? 'phone-alt' :
+              detail.type.name() == 'ADDRESS' ? 'home' :
+              detail.type.name() == 'EMAIL' ? 'envelope' :
+              detail.type.name() == 'NOTE' ? 'bookmark' : ''
+              }"
+            th:text="${' '+detail.value}"></span></h3>
         </li>
       </ul>
     </li>
